@@ -29,4 +29,7 @@ run Rack::URLMap.new(
   '/'       => Bandiera::GUI,
   '/api/v1' => Bandiera::APIv1,
   '/api/v2' => Bandiera::APIv2
+  '/bandiera'       => Bandiera::GUI,
+  '/bandiera/api/v1' => Bandiera::APIv1,
+  '/bandiera/api/v2' => Bandiera::APIv2
 )
