@@ -25,5 +25,4 @@ COPY . .
 
 EXPOSE 5000
 
-RUN bundle exec rake db:migrate
-CMD "puma"
+CMD "bundle exec rake db:migrate; puma"
