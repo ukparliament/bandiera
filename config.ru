@@ -28,7 +28,7 @@ use Airbrake::Rack::Middleware if ENV['AIRBRAKE_API_KEY'] && ENV['AIRBRAKE_PROJE
 run Rack::URLMap.new(
   '/'       => Bandiera::GUI,
   '/api/v1' => Bandiera::APIv1,
-  '/api/v2' => Bandiera::APIv2
+  '/api/v2' => Bandiera::APIv2,
   '/bandiera'       => Bandiera::GUI,
   '/bandiera/api/v1' => Bandiera::APIv1,
   '/bandiera/api/v2' => Bandiera::APIv2
