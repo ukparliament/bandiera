@@ -45,6 +45,11 @@ CONTAINER_PORT = 5000
 # Host port used for mapping when running our Docker image.
 HOST_PORT = 80
 
+# Bandiera database password
+DB_PASSWORD = $(shell credstash get bandiera/db-password)
+
+DATABASE_URL = postgres://$(DB_USERNAME):$(DB_PASSWORD)@$(DB_SERVER):5432/$(DB_DATABASE)
+
 ##
 # MAKE TASKS
 #   Tasks used locally and within our build pipelines to build, test and run our Docker image.
