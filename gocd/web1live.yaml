@@ -1,0 +1,49 @@
+pipelines:
+  bandiera:
+    group: common
+    label_template: "${COUNT}"
+    environment_variables:
+      DB_SERVER: website.ckcmm7q8lasq.eu-west-1.rds.amazonaws.com
+      DB_USERNAME: bandiera
+      DB_DATABASE: bandiera
+      RACK_ENV: production
+      LOG_TO_STDOUT: true
+    materials:
+      bandiera-git:
+        git: https://github.com/ukparliament/bandiera.git
+        branch: master
+        auto_update: true
+    stages:
+      - build:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - build
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - push
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - rmi
+      - deploy:
+          jobs:
+            deploy:
+              tasks:
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
+                      - deploy-ecs
+
+environments:
+  Web.LIVE:
+    pipelines:
+      - bandiera
