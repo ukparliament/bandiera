@@ -1,6 +1,6 @@
 pipelines:
   bandiera:
-    group: common
+    group: Main
     label_template: "${COUNT}"
     environment_variables:
       DB_SERVER: website.ckcmm7q8lasq.eu-west-1.rds.amazonaws.com
