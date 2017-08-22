@@ -48,7 +48,7 @@ HOST_PORT = 80
 # Bandiera database password
 DB_PASSWORD = $(shell credstash get bandiera/db-password)
 
-DATABASE_URL = postgres://$(DB_USERNAME):$(DB_PASSWORD)@$(DB_SERVER):5432
+DATABASE_URL = postgres://$(DB_USERNAME):$(DB_PASSWORD)@$(DB_SERVER):5432/$(DB_DATABASE)
 
 ##
 # MAKE TASKS

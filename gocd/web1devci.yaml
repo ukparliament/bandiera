@@ -5,6 +5,7 @@ pipelines:
     environment_variables:
       DB_SERVER: website.cawtafuyrkpe.eu-west-1.rds.amazonaws.com
       DB_USERNAME: bandiera
+      DB_DATABASE: bandiera
       RACK_ENV: production
       LOG_TO_STDOUT: true
     materials:
