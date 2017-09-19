@@ -1,4 +1,5 @@
-FROM ruby:alpine
+FROM ruby:2.4.2-alpine
+
 MAINTAINER Darren Oakley <daz.oakley@gmail.com>
 
 # Add command line argument variables used to cusomise the image at build-time.
