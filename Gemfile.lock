@@ -191,7 +191,7 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake
-  capybara (>= 2.14.0)
+  capybara (>= 2.15.1)
   dotenv
   erubis
   guard-rspec
@@ -203,7 +203,7 @@ DEPENDENCIES
   mysql2
   newrelic_rpm
   pg
-  poltergeist (>= 1.15.0)
+  poltergeist (>= 1.16.0)
   pry
   puma
   rack-flash3

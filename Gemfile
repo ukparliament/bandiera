@@ -31,8 +31,8 @@ group :test do
   gem 'jdbc-sqlite3', platform: :jruby
   gem 'rspec'
   gem 'rack-test'
-  gem 'capybara', '>= 2.14.0'
-  gem 'poltergeist', '>= 1.15.0'
+  gem 'capybara', '>= 2.15.1'
+  gem 'poltergeist', '>= 1.16.0'
   gem 'webmock'
   gem 'pry'
   gem 'guard-rspec', require: false
