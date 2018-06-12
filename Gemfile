@@ -9,10 +9,10 @@ gem 'pg', platform: :ruby
 gem 'jdbc-mysql', platform: :jruby
 gem 'jdbc-postgres', platform: :jruby
 
-gem 'sinatra'
+gem 'sinatra', '>= 2.0.2'
 gem 'rack-flash3'
 gem 'erubis'
-gem 'macmillan-utils'
+gem 'macmillan-utils', '>= 1.0.41'
 gem 'lru_redux'
 
 gem 'puma', require: false
@@ -26,7 +26,7 @@ group :development do
 end
 
 group :test do
-  gem 'rubocop'
+  gem 'rubocop', '>= 0.49.0'
   gem 'sqlite3', platform: :ruby
   gem 'jdbc-sqlite3', platform: :jruby
   gem 'rspec'
