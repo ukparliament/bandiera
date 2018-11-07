@@ -9,8 +9,8 @@ gem 'pg', platform: :ruby
 gem 'jdbc-mysql', platform: :jruby
 gem 'jdbc-postgres', platform: :jruby
 
-gem 'sinatra'
-gem 'rack-flash3'
+gem 'sinatra', '>= 2.0.0'
+gem 'rack-flash3', '>= 1.0.5'
 gem 'erubis'
 gem 'macmillan-utils'
 gem 'lru_redux'
@@ -22,7 +22,7 @@ gem 'statsd-ruby', require: false
 gem 'newrelic_rpm'
 
 group :development do
-  gem 'shotgun'
+  gem 'shotgun', '>= 0.9.2'
 end
 
 group :test do
@@ -30,7 +30,7 @@ group :test do
   gem 'sqlite3', platform: :ruby
   gem 'jdbc-sqlite3', platform: :jruby
   gem 'rspec'
-  gem 'rack-test'
+  gem 'rack-test', '>= 0.7.0'
   gem 'capybara', '>= 2.15.1'
   gem 'poltergeist', '>= 1.16.0'
   gem 'webmock'
