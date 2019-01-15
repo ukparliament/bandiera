@@ -44,6 +44,6 @@ pipelines:
                       - deploy-ecs
 
 environments:
-  Web.LIVE:
+  WebLIVE:
     pipelines:
       - bandiera
