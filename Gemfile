@@ -34,7 +34,7 @@ group :test do
   gem 'capybara', '>= 2.15.1'
   gem 'poltergeist', '>= 1.16.0'
   gem 'webmock'
-  gem 'pry'
-  gem 'guard-rspec', require: false
+  gem 'pry', '>= 0.10.4'
+  gem 'guard-rspec', '>= 4.7.3', require: false
   gem 'timecop'
 end
